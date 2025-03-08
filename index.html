@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bert Capital - A family office fund investing in blockchain technologies and digital assets. Explore our investments in Bitcoin, Ethereum, and Tron blockchain ventures.">
+    <title>Bert Capital - Investment Fund</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <style>
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #94a3b8;
+            --bg-overlay: rgba(0, 0, 0, 0.9);
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            scroll-behavior: smooth;
+            background: #000;
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        /* Hide scrollbar but keep functionality */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        body {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            z-index: 1000;
+        }
+        
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.3);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-y: auto;
+        }
+        
+        main, section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+        
+        #thesis, #what-we-do, #portfolio {
+            padding-top: 80px;
+            padding-bottom: 40px;
+            box-sizing: border-box;
+        }
+        
+        /* Pie chart styles */
+        .pie-container {
+            position: relative;
+            height: 250px;
+            width: 100%;
+        }
+        
+        .pie-slice {
+            transition: all 0.3s ease-in-out;
+        }
+        
+        .pie-slice:hover {
+            transform: translateX(5px) translateY(-5px);
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5));
+        }
+        
+        .pie-label {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+        }
+        
+        /* Force AOS animations to work when scrolling up */
+        [data-aos][data-aos].aos-animate {
+            transition-property: all;
+        }
+        
+        /* Added styles for section underlines */
+        .nav-link {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link.active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video class="background-video" autoplay loop muted playsinline>
+        <source src="assets/background.mp4" type="video/mp4">
+    </video>
+
+    <header class="sticky-nav flex justify-between items-center">
+        <div>
+            <a href="/">
+                <img src="assets/logo.png" alt="Bert Capital Logo" class="h-12 md:h-16">
+            </a>
+        </div>
+        <nav class="hidden md:flex space-x-6 lg:space-x-8 text-lg" data-aos="fade-down" data-aos-once="false">
+            <a href="#thesis" class="nav-link active hover:underline transition-all duration-300">THESIS</a>
+            <a href="#what-we-do" class="nav-link hover:underline transition-all duration-300">WHAT WE DO</a>
+            <a href="#portfolio" class="nav-link hover:underline transition-all duration-300">PORTFOLIO</a>
+        </nav>
+    </header>
+
+    <main class="flex flex-col items-center justify-center min-h-screen text-center px-6" id="thesis" data-section="0">
+        <h3 class="text-lg uppercase tracking-widest text-gray-400 mb-2" data-aos="fade-up" data-aos-once="false" data-aos-anchor-placement="center-bottom">Thesis</h3>
+        <h2 class="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 max-w-4xl" data-aos="fade-up" data-aos-once="false" data-aos-anchor-placement="center-bottom">
+            We believe that Bitcoin and other cryptographically-protected sound money are the next frontier of technological revolution
+        </h2>
+        <p class="text-xl mt-6 text-gray-300" data-aos="fade-up" data-aos-delay="200" data-aos-once="false" data-aos-anchor-placement="center-bottom">A Filbert Wibowo's family office fund, we do not seek any outside capital.</p>
+    </main>
+
+    <section class="py-20 md:py-32 text-center" id="what-we-do" data-section="1">
+        <h3 class="text-lg uppercase tracking-widest text-gray-400 mb-2" data-aos="fade-up" data-aos-once="false" data-aos-anchor-placement="center-bottom">What We Do</h3>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" data-aos="fade-up" data-aos-once="false" data-aos-anchor-placement="center-bottom">Value Driven Investors in Blockchain Innovation</h2>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-300" data-aos="fade-up" data-aos-delay="200" data-aos-once="false" data-aos-anchor-placement="center-bottom">
+            We make long-term investments in liquid digital assets and venture equity in companies building foundational blockchain infrastructure.
+        </p>
+    </section>
+
+    <section class="py-20" id="portfolio" data-section="2">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl mb-8 text-center" data-aos="fade-up" data-aos-once="false" data-aos-anchor-placement="center-bottom">PORTFOLIO</h2>
+            
+            <div class="p-8 bg-black/30 backdrop-blur-sm rounded-xl" data-aos="zoom-in" data-aos-once="false" data-aos-anchor-placement="center-bottom">
+                <h3 class="text-3xl font-light mb-6 text-center">Liquid Digital Assets</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="flex flex-col items-center p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all" data-aos="flip-left" data-aos-once="false" data-aos-anchor-placement="center-bottom">
+                        <img alt="Bitcoin logo" class="w-16 h-16 mb-4" src="https://cryptologos.cc/logos/bitcoin-btc-logo.png" loading="lazy" />
+                        <span class="text-lg">Bitcoin (BTC)</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all" data-aos="flip-left" data-aos-delay="200" data-aos-once="false" data-aos-anchor-placement="center-bottom">
+                        <svg class="w-16 h-16 mb-4" viewBox="0 0 784.37 1277.39" xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <polygon fill="#343434" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54"/>
+                                <polygon fill="#8C8C8C" points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33"/>
+                                <polygon fill="#3C3C3B" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89"/>
+                                <polygon fill="#8C8C8C" points="392.07,1277.38 392.07,956.52 -0,724.89"/>
+                                <polygon fill="#141414" points="392.07,882.29 784.13,650.54 392.07,472.33"/>
+                                <polygon fill="#393939" points="0,650.54 392.07,882.29 392.07,472.33"/>
+                            </g>
+                        </svg>
+                        <span class="text-lg">Ethereum (ETH)</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-all" data-aos="flip-left" data-aos-delay="400" data-aos-once="false" data-aos-anchor-placement="center-bottom">
+                        <img alt="Tron logo" class="w-16 h-16 mb-4" src="https://cryptologos.cc/logos/tron-trx-logo.png" loading="lazy" />
+                        <span class="text-lg">Tron (TRX)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Portfolio Allocation Chart (Landscape) -->
+            <div class="mt-12 p-6 bg-gray-900 rounded-xl shadow-xl" data-aos="zoom-in" data-aos-once="false" data-aos-anchor-placement="center-bottom">
+                <h3 class="text-2xl font-light text-center text-white mb-6">Portfolio Allocation</h3>
+                
+                <div class="flex flex-col md:flex-row">
+                    <div class="h-64 md:w-2/3 pie-container" id="portfolio-chart"></div>
+                    
+                    <div class="md:w-1/3 flex flex-col justify-center mt-8 md:mt-0">
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full mr-4" style="background-color: #F7931A"></div>
+                                <div>
+                                    <p class="text-sm text-white font-medium">Bitcoin (BTC)</p>
+                                    <p class="text-xl font-light text-white">90%</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full mr-4" style="background-color: #800080"></div>
+                                <div>
+                                    <p class="text-sm text-white font-medium">Ethereum (ETH)</p>
+                                    <p class="text-xl font-light text-white">5%</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-6 h-6 rounded-full mr-4" style="background-color: #EF0027"></div>
+                                <div>
+                                    <p class="text-sm text-white font-medium">Tron (TRX)</p>
+                                    <p class="text-xl font-light text-white">5%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 text-center text-gray-400 bg-black/50">
+        <p class="mb-4">Bert Capital - A Filbert Wibowo's Family Office</p>
+        <p class="text-sm">© 2023 All Rights Reserved</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS with settings for bi-directional animations
+            AOS.init({
+                duration: 1000,
+                offset: 100,
+                easing: 'ease-in-out',
+                mirror: true,     // This enables animations when scrolling up
+                once: false,      // This allows animations to repeat
+                anchorPlacement: 'top-bottom',
+                disable: false
+            });
+            
+            // Define sections for navigation
+            const sections = document.querySelectorAll('[data-section]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            let currentSectionIndex = 0;
+            let isScrolling = false;
+            let lastScrollTime = 0;
+            const scrollCooldown = 1000; // 1 second cooldown between scrolls
+            
+            // Function to update active navigation link
+            function updateActiveNavLink() {
+                navLinks.forEach((link, index) => {
+                    if (index === currentSectionIndex) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+            
+            // Function to scroll to a specific section
+            function scrollToSection(index) {
+                if (index < 0 || index >= sections.length || isScrolling) return;
+                
+                isScrolling = true;
+                currentSectionIndex = index;
+                
+                // Update active navigation link
+                updateActiveNavLink();
+                
+                // Get the target section and scroll to it
+                const targetSection = sections[index];
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // After scrolling, reset the scrolling flag and refresh animations
+                setTimeout(() => {
+                    isScrolling = false;
+                    // Force AOS to refresh and check for new elements to animate
+                    AOS.refresh();
+                }, 2000); // Changed to 2 seconds (2000ms) as requested
+            }
+            
+            // Handle wheel events for one-section-at-a-time scrolling
+            window.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                
+                const now = Date.now();
+                if (now - lastScrollTime < scrollCooldown) return;
+                lastScrollTime = now;
+                
+                if (e.deltaY > 0) {
+                    // Scroll down
+                    scrollToSection(currentSectionIndex + 1);
+                } else {
+                    // Scroll up
+                    scrollToSection(currentSectionIndex - 1);
+                }
+            }, { passive: false });
+            
+            // Handle keyboard navigation (arrow keys, page up/down)
+            document.addEventListener('keydown', function(e) {
+                const now = Date.now();
+                if (now - lastScrollTime < scrollCooldown) return;
+                
+                if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+                    lastScrollTime = now;
+                    scrollToSection(currentSectionIndex + 1);
+                    e.preventDefault();
+                } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+                    lastScrollTime = now;
+                    scrollToSection(currentSectionIndex - 1);
+                    e.preventDefault();
+                }
+            });
+            
+            // Navigation menu click handlers
+            document.querySelectorAll('nav a').forEach(function(link, index) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    const index = Array.from(sections).findIndex(section => section.id === targetId);
+                    
+                    if (index !== -1) {
+                        scrollToSection(index);
+                    }
+                });
+            });
+            
+            // Update current section index on page load
+            function setInitialSection() {
+                // Get page scroll position
+                const scrollPosition = window.scrollY + (window.innerHeight / 2);
+                
+                // Determine which section we're currently in
+                let minDistance = Infinity;
+                let closestSectionIndex = 0;
+                
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const distance = Math.abs(scrollPosition - sectionTop);
+                    
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        closestSectionIndex = index;
+                    }
+                });
+                
+                currentSectionIndex = closestSectionIndex;
+                updateActiveNavLink();
+            }
+            
+            // Run on page load to set correct initial section
+            setInitialSection();
+            
+            // Create the pie chart with native SVG
+            const chartContainer = document.getElementById('portfolio-chart');
+            if (chartContainer) {
+                // Data portfolio
+                const data = [
+                    { name: 'Bitcoin (BTC)', value: 90, color: '#F7931A' },
+                    { name: 'Ethereum (ETH)', value: 5, color: '#800080' },
+                    { name: 'Tron (TRX)', value: 5, color: '#EF0027' }
+                ];
+                
+                // Membuat SVG Chart
+                const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                svg.setAttribute('width', '100%');
+                svg.setAttribute('height', '100%');
+                svg.setAttribute('viewBox', '0 0 250 250');
+                
+                // Definisi donut chart
+                const centerX = 125;
+                const centerY = 125;
+                const outerRadius = 100;
+                const innerRadius = 60;
+                
+                // Fungsi untuk membuat path arc
+                function describeArc(x, y, innerRadius, outerRadius, startAngle, endAngle) {
+                    const startAngleRad = (startAngle - 90) * Math.PI / 180;
+                    const endAngleRad = (endAngle - 90) * Math.PI / 180;
+                    
+                    const startX = x + outerRadius * Math.cos(startAngleRad);
+                    const startY = y + outerRadius * Math.sin(startAngleRad);
+                    const endX = x + outerRadius * Math.cos(endAngleRad);
+                    const endY = y + outerRadius * Math.sin(endAngleRad);
+                    
+                    const startX2 = x + innerRadius * Math.cos(endAngleRad);
+                    const startY2 = y + innerRadius * Math.sin(endAngleRad);
+                    const endX2 = x + innerRadius * Math.cos(startAngleRad);
+                    const endY2 = y + innerRadius * Math.sin(startAngleRad);
+                    
+                    const largeArcFlag = endAngle - startAngle <= 180 ? 0 : 1;
+                    
+                    return [
+                        `M ${startX} ${startY}`,
+                        `A ${outerRadius} ${outerRadius} 0 ${largeArcFlag} 1 ${endX} ${endY}`,
+                        `L ${startX2} ${startY2}`,
+                        `A ${innerRadius} ${innerRadius} 0 ${largeArcFlag} 0 ${endX2} ${endY2}`,
+                        'Z'
+                    ].join(' ');
+                }
+                
+                // Menggambar segmen donut berdasarkan data
+                let currentAngle = 0;
+                data.forEach(item => {
+                    const slice = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                    const angle = (item.value / 100) * 360;
+                    const path = describeArc(centerX, centerY, innerRadius, outerRadius, currentAngle, currentAngle + angle);
+                    
+                    slice.setAttribute('d', path);
+                    slice.setAttribute('fill', item.color);
+                    slice.setAttribute('stroke', '#111827');
+                    slice.setAttribute('stroke-width', '2');
+                    slice.setAttribute('class', 'pie-slice');
+                    
+                    // Tambahkan animasi hover
+                    slice.addEventListener('mouseover', function() {
+                        this.setAttribute('transform', 'translate(5, -5)');
+                        this.setAttribute('filter', 'drop-shadow(0 4px 6px rgba(0, 0, 0, 0.5))');
+                    });
+                    
+                    slice.addEventListener('mouseout', function() {
+                        this.setAttribute('transform', '');
+                        this.setAttribute('filter', '');
+                    });
+                    
+                    // Tambahkan label persen
+                    const labelAngle = currentAngle + (angle / 2);
+                    const labelRadius = (innerRadius + outerRadius) / 2;
+                    const labelX = centerX + labelRadius * Math.cos((labelAngle - 90) * Math.PI / 180);
+                    const labelY = centerY + labelRadius * Math.sin((labelAngle - 90) * Math.PI / 180);
+                    
+                    const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+                    label.setAttribute('x', labelX);
+                    label.setAttribute('y', labelY);
+                    label.setAttribute('text-anchor', 'middle');
+                    label.setAttribute('dominant-baseline', 'middle');
+                    label.setAttribute('fill', '#ffffff');
+                    label.setAttribute('font-size', '14');
+                    label.setAttribute('class', 'pie-label');
+                    label.textContent = `${item.value}%`;
+                    
+                    svg.appendChild(slice);
+                    svg.appendChild(label);
+                    
+                    currentAngle += angle;
+                });
+                
+                // Tambahkan SVG ke container
+                chartContainer.appendChild(svg);
+            }
+
+            // Membuat efek hover pada kartu portofolio
+            const cards = document.querySelectorAll('.bg-gray-900');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.classList.add('transform', 'scale-105', 'shadow-lg');
+                    this.style.transition = 'all 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.classList.remove('transform', 'scale-105', 'shadow-lg');
+                });
+            });
+            
+            // Menambahkan efek parallax pada scroll
+            window.addEventListener('scroll', function() {
+                const scrolled = window.scrollY;
+                const videoBackground = document.querySelector('.background-video');
+                if (videoBackground) {
+                    videoBackground.style.transform = `translateY(${scrolled * 0.15}px)`;
+                }
+                
+                // Re-check animations on scroll
+                AOS.refresh();
+                
+                // Update active navigation link based on current section
+                updateActiveSection();
+            });
+            
+            // Function to update active section based on scroll position
+            function updateActiveSection() {
+                const scrollPosition = window.scrollY + (window.innerHeight / 3);
+                
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        currentSectionIndex = index;
+                        updateActiveNavLink();
+                    }
+                });
+            }
+            
+            // Add a manual check for animations when sections change
+            function checkAndRefreshAnimations() {
+                // Force refresh AOS
+                AOS.refreshHard();
+                
+                // Manually check for elements that should be animated
+                document.querySelectorAll('[data-aos]').forEach(element => {
+                    const rect = element.getBoundingClientRect();
+                    const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+                    
+                    // If element is in view
+                    if (rect.top <= viewHeight && rect.bottom >= 0) {
+                        element.classList.add('aos-animate');
+                    } else {
+                        element.classList.remove('aos-animate');
+                    }
+                });
+            }
+            
+            // Check animations after page load and after each scroll
+            setTimeout(checkAndRefreshAnimations, 500);
+            window.addEventListener('scroll', checkAndRefreshAnimations);
+        });
+    </script>
+</body>
+</html>

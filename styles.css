@@ -1,0 +1,314 @@
+@import url('https://cdn.tailwindcss.com');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+:root {
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --bg-overlay: rgba(0, 0, 0, 0.7);
+}
+
+body {
+    font-family: 'Playfair Display', serif;
+    scroll-behavior: smooth;
+    color: var(--text-primary);
+    background: url('assets/background.mp4') center center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+}
+
+/* Background overlay */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-overlay);
+    z-index: -1;
+}
+
+/* Video background */
+.background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    object-fit: cover;
+}
+
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+/* Utility classes */
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.space-x-6 > * + * {
+    margin-left: 1.5rem;
+}
+
+.space-x-8 > * + * {
+    margin-left: 2rem;
+}
+
+.text-lg {
+    font-size: 1.125rem;
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+.transition-all {
+    transition-property: all;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+.h-12 {
+    height: 3rem;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.tracking-widest {
+    letter-spacing: 0.1em;
+}
+
+.text-gray-400 {
+    color: #9ca3af;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.text-5xl {
+    font-size: 3rem;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.leading-tight {
+    line-height: 1.25;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.max-w-4xl {
+    max-width: 56rem;
+}
+
+.text-xl {
+    font-size: 1.25rem;
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.text-gray-300 {
+    color: #d1d5db;
+}
+
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.text-4xl {
+    font-size: 2.25rem;
+}
+
+.text-2xl {
+    font-size: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.border {
+    border-width: 1px;
+}
+
+.border-gray-800 {
+    border-color: #1f2937;
+}
+
+.rounded-xl {
+    border-radius: 0.75rem;
+}
+
+.p-8 {
+    padding: 2rem;
+}
+
+.bg-black\/30 {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+}
+
+.text-3xl {
+    font-size: 1.875rem;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.p-4 {
+    padding: 1rem;
+}
+
+.bg-gray-900 {
+    background-color: #111827;
+}
+
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+.hover\:bg-gray-800:hover {
+    background-color: #1f2937;
+}
+
+.w-16 {
+    width: 4rem;
+}
+
+.h-16 {
+    height: 4rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.bg-black\/50 {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-sm {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .md\:flex {
+        display: flex;
+    }
+    
+    .md\:h-16 {
+        height: 4rem;
+    }
+    
+    .md\:py-32 {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    
+    .md\:text-5xl {
+        font-size: 3rem;
+    }
+    
+    .md\:text-xl {
+        font-size: 1.25rem;
+    }
+    
+    .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:space-x-8 > * + * {
+        margin-left: 2rem;
+    }
+    
+    .lg\:text-7xl {
+        font-size: 4.5rem;
+    }
+    
+    .lg\:text-6xl {
+        font-size: 3.75rem;
+    }
+    
+    .lg\:text-2xl {
+        font-size: 1.5rem;
+    }
+}
